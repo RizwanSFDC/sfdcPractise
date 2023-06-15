@@ -1,0 +1,130 @@
+public class Demo1 {
+
+    public void ListDemo1() {
+        List < Integer > intList = new List < Integer > ();
+        intList.add(1);
+        intList.add(2);
+        intList.add(3);
+        intList.add(4);
+        System.debug('IntegerList:' + intList);
+    }
+
+    public void ListDemo2() {
+        List < Integer > numList = new List < Integer > ();
+        for (Integer i = 0; i < 10; i++) {
+            numList.add(i);
+        }
+        System.debug('IntegerList:' + numList);
+        numList.add(1, 1000);
+        System.debug('IntegerList:' + numList);
+    }
+    public void ListDemo3() {
+        List < Integer > numList = new List < Integer > ();
+        List < Integer > numList2 = new List < Integer > ();
+        for (Integer i = 0; i < 5; i++) {
+            numList.add(i);
+        }
+        System.debug('IntegerList1:' + numList);
+        numList2.add(10);
+        numList2.add(20);
+        numList.addAll(numList2);
+        System.debug('IntegerList2:' + numList);
+    }
+
+    public void ListDemo4() {
+        List < Integer > intList = new List < Integer > ();
+        List < Integer > intList2 = new List < Integer > ();
+        intList.add(1);
+        intList.add(2);
+        intList.add(3);
+        intList.add(4);
+        intList2 = intList.clone();
+        System.debug('IntegerList1:' + intList);
+        System.debug('IntegerList2:' + intList2);
+        intList.clear();
+        System.debug('IntegerList:' + intList);
+    }
+
+    public void ListDemo5(Integer n) {
+        List < Integer > intList = new List < Integer > ();
+        List < Integer > intList2 = new List < Integer > ();
+        intList.add(1);
+        intList.add(2);
+        intList.add(3);
+        intList.add(4);
+        intList.add(500);
+        intList2.add(10);
+        if (intList.contains(n)) {
+            System.debug('Value found:' + n);
+        } else {
+            System.debug('Value NOT found: ' + n);
+        }
+
+        System.debug('FirstElemet of intList:' + intList.get(1));
+        System.debug('Index of 500:' + intList.indexOf(500));
+
+
+
+
+    }
+
+
+    public void ListDemo6() {
+        List < Integer > intList = new List < Integer > ();
+        List < Integer > intList2 = new List < Integer > ();
+        intList.add(1);
+        intList.add(2);
+        intList.add(3);
+
+        intList2 = intList.clone();
+        if (intList.equals(intList2)) {
+            System.debug('Yes Both Equal');
+        } else {
+            System.debug('Yes Both NOT Equal');
+        }
+    }
+    public void ListDemo7() {
+        List < Integer > intList2 = new List < Integer > ();
+        intList2.add(200);
+        if (intlIst2.isempty()) {
+            System.debug('Yes Empty');
+        } else {
+            System.debug('Not Empty But contains as..' + intlIst2);
+        }
+    }
+
+    public void ListDemo8() {
+        List < Integer > numList = new List < Integer > ();
+        numList.add(100);
+        numList.add(200);
+        numList.add(300);
+        System.debug('The NumList Contains: ' + numList);
+        numList.remove(2);
+        System.debug('The NumList Contains: ' + numList);
+    }
+
+    public void ListDemo9() {
+        List < Integer > numList = new List < Integer > ();
+        numList.add(null); // Add a null value at index 0
+        numList.add(null); // Add a null value at index 1
+        numList.add(null); // Add a null value at index 2
+
+        numList.set(0, 10001); // Set value at index 0
+        numList.set(1, 2002); // Set value at index 1
+        numList.set(2, 3003); // Set value at index 2
+
+        System.debug('The NumList Contains: ' + numList);
+    }
+
+    public void ListDemo10() {
+        List < Integer > numList = new List < Integer > ();
+        numList.add(9); // Add a null value at index 0
+        numList.add(5); // Add a null value at index 1
+        numList.add(2); // Add a null value at index 2
+        numList.sort();
+        System.debug('The Size of numList Contains: ' + numList.size());
+        System.debug('The Sort of numList: ' + numList);
+    }
+
+
+}
